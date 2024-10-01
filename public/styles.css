@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    height: 200vh;
+    background: linear-gradient(to bottom, #0e5582, #000);
+    color: white;
+    font-family: 'Fira Code', monospace;
+    overflow-x: hidden;
+}
+
+.intro {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.scroll-down {
+    margin-top: 20px;
+    font-size: 1.2em;
+    animation: bounce 1.5s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.services {
+    padding: 50px;
+    background-color: #1a1a1a;
+    color: white;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.services.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service h3 {
+    margin: 0;
+}
+
+.service a {
+    color: #87CEFA;
+    text-decoration: none;
+}
+
+.service a:hover {
+    text-decoration: underline;
+}
